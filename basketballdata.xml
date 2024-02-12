@@ -1,0 +1,316 @@
+<basketball>
+
+<player>
+  <playerID>1</playerID>
+  <name>LeBron James</name>
+  <age>37</age>
+  <position>Small Forward</position>
+  <Country>United States</Country>
+  <team_name>Los Angeles Lakers</team_name>
+</player>
+
+<player>
+  <playerID>2</playerID>
+  <name>Kevin Durant</name>
+  <age>33</age>
+  <position>Small Forward</position>
+  <Country>United States</Country>
+  <team_name>Brooklyn Nets</team_name>
+</player>
+
+<player>
+  <playerID>3</playerID>
+  <name>Luka Doncic</name>
+  <age>22</age>
+  <position>Point Guard</position>
+  <Country>Slovenia</Country>
+  <team_name>Dallas Mavericks</team_name>
+</player>
+
+<player>
+  <playerID>4</playerID>
+  <name>Giannis Antetokounmpo</name>
+  <age>27</age>
+  <position>Power Forward</position>
+  <Country>Greece</Country>
+  <team_name>Milwaukee Bucks</team_name>
+</player>
+
+<player>
+  <playerID>5</playerID>
+  <name>Stephen Curry</name>
+  <age>33</age>
+  <position>Point Guard</position>
+  <Country>United States</Country>
+  <team_name>Golden State Warriors</team_name>
+</player>
+
+
+<stats>
+  <statID>1</statID>
+  <name>LeBron James</name>
+  <pointsPG>25.5</pointsPG>
+  <assistsPG>7.7</assistsPG>
+  <reboundsPG>7.9</reboundsPG>
+  <blocksPG>0.6</blocksPG>
+  <stealsPG>1.3</stealsPG>
+</stats>
+
+<stats>
+  <statID>2</statID>
+  <name>Kevin Durant</name>
+  <pointsPG>28.2</pointsPG>
+  <assistsPG>5.2</assistsPG>
+  <reboundsPG>7.1</reboundsPG>
+  <blocksPG>1.3</blocksPG>
+  <stealsPG>0.8</stealsPG>
+</stats>
+
+<stats>
+  <statID>3</statID>
+  <name>Luka Doncic</name>
+  <pointsPG>26.5</pointsPG>
+  <assistsPG>9.1</assistsPG>
+  <reboundsPG>8.4</reboundsPG>
+  <blocksPG>0.5</blocksPG>
+  <stealsPG>1.0</stealsPG>
+</stats>
+
+<stats>
+  <statID>4</statID>
+  <name>Giannis Antetokounmpo</name>
+  <pointsPG>28.1</pointsPG>
+  <assistsPG>5.9</assistsPG>
+  <reboundsPG>11.0</reboundsPG>
+  <blocksPG>1.2</blocksPG>
+  <stealsPG>1.2</stealsPG>
+</stats>
+
+<stats>
+  <statID>5</statID>
+  <name>Stephen Curry</name>
+  <pointsPG>30.2</pointsPG>
+  <assistsPG> 7.7</assistsPG>
+  <reboundsPG>4.2</reboundsPG>
+  <blocksPG>0.6</blocksPG>
+  <stealsPG>1.7</stealsPG>
+</stats>
+
+
+
+<awards>
+  <award>
+    <awardID>1</awardID>
+    <awardee_name>LeBron James</awardee_name>
+    <MVPS>4</MVPS>
+    <NumofAllStars>17</NumofAllStars>
+    <NumofChampionships>4</NumofChampionships>
+  </award>
+  <award>
+    <awardID>2</awardID>
+    <awardee_name>Stephen Curry</awardee_name>
+    <MVPS>2</MVPS>
+    <NumofAllStars>7</NumofAllStars>
+    <NumofChampionships>3</NumofChampionships>
+  </award>
+  <award>
+    <awardID>3</awardID>
+    <awardee_name>Kevin Durant</awardee_name>
+    <MVPS>1</MVPS>
+    <NumofAllStars>11</NumofAllStars>
+    <NumofChampionships>2</NumofChampionships>
+  </award>
+  <award>
+    <awardID>4</awardID>
+    <awardee_name>Kobe Bryant</awardee_name>
+    <MVPS>1</MVPS>
+    <NumofAllStars>18</NumofAllStars>
+    <NumofChampionships>5</NumofChampionships>
+  </award>
+  <award>
+    <awardID>5</awardID>
+    <awardee_name>Michael Jordan</awardee_name>
+    <MVPS>5</MVPS>
+    <NumofAllStars>14</NumofAllStars>
+    <NumofChampionships>6</NumofChampionships>
+  </award>
+</awards>
+
+
+
+<physicalprofiles>
+  <physicalprofile>
+    <profileID>1</profileID>
+    <name>LeBron James</name>
+    <height>6'8"</height>
+    <weight>250</weight>
+    <Wingspan>7'0"</Wingspan>
+  </physicalprofile>
+  <physicalprofile>
+    <profileID>2</profileID>
+    <name>Stephen Curry</name>
+    <height>6'3"</height>
+    <weight>185</weight>
+    <Wingspan>6'4"</Wingspan>
+  </physicalprofile>
+  <physicalprofile>
+    <profileID>3</profileID>
+    <name>Kevin Durant</name>
+    <height>6'10"</height>
+    <weight>240</weight>
+    <Wingspan>7'4"</Wingspan>
+  </physicalprofile>
+  <physicalprofile>
+    <profileID>4</profileID>
+    <name>Kobe Bryant</name>
+    <height>6'6"</height>
+    <weight>212</weight>
+    <Wingspan>6'11"</Wingspan>
+  </physicalprofile>
+  <physicalprofile>
+    <profileID>5</profileID>
+    <name>Michael Jordan</name>
+    <height>6'6"</height>
+    <weight>216</weight>
+    <Wingspan>6'11"</Wingspan>
+  </physicalprofile>
+</physicalprofiles>
+
+<team>
+  <teamID>1</teamID>
+  <teamName>Los Angeles Lakers</teamName>
+  <conference>West</conference>
+  <wins>54</wins>
+  <losses>28</losses>
+  <ranking>5</ranking>
+</team>
+<team>
+  <teamID>2</teamID>
+  <teamName>Phoenix Suns</teamName>
+  <conference>West</conference>
+  <wins>56</wins>
+  <losses>26</losses>
+  <ranking>3</ranking>
+</team>
+<team>
+  <teamID>3</teamID>
+  <teamName>Golden State Warriors</teamName>
+  <conference>West</conference>
+  <wins>64</wins>
+  <losses>18</losses>
+  <ranking>2</ranking>
+</team>
+<team>
+  <teamID>4</teamID>
+  <teamName>Memphis Grizzlies</teamName>
+  <conference>West</conference>
+  <wins>50</wins>
+  <losses>32</losses>
+  <ranking>6</ranking>
+</team>
+<team>
+  <teamID>5</teamID>
+  <teamName>Philadelphia 76ers</teamName>
+  <conference>East</conference>
+  <wins>55</wins>
+  <losses>27</losses>
+  <ranking>4</ranking>
+</team>
+
+<player_possess_profile>
+  <playerID>1</playerID>
+  <profileID>1</profileID>
+</player_possess_profile>
+<player_possess_profile>
+  <playerID>2</playerID>
+  <profileID>2</profileID>
+</player_possess_profile>
+<player_possess_profile>
+  <playerID>3</playerID>
+  <profileID>3</profileID>
+</player_possess_profile>
+<player_possess_profile>
+  <playerID>4</playerID>
+  <profileID>4</profileID>
+</player_possess_profile>
+<player_possess_profile>
+  <playerID>5</playerID>
+  <profileID>5</profileID>
+</player_possess_profile>
+
+<player_accumulate_stats>
+  <playerID>1</playerID>
+  <statID>1</statID>
+</player_accumulate_stats>
+<player_accumulate_stats>
+  <playerID>2</playerID>
+  <statID>2</statID>
+</player_accumulate_stats>
+<player_accumulate_stats>
+  <playerID>3</playerID>
+  <statID>3</statID>
+</player_accumulate_stats>
+<player_accumulate_stats>
+  <playerID>4</playerID>
+  <statID>4</statID>
+</player_accumulate_stats>
+<player_accumulate_stats>
+  <playerID>5</playerID>
+  <statID>5</statID>
+</player_accumulate_stats>
+
+<player_earn_awards>
+  <awardID>1</awardID>
+  <playerID>1</playerID>
+</player_earn_awards>
+<player_earn_awards>
+  <awardID>2</awardID>
+  <playerID>2</playerID>
+</player_earn_awards>
+<player_earn_awards>
+  <awardID>2</awardID>
+  <playerID>2</playerID>
+</player_earn_awards>
+<player_earn_awards>
+  <awardID>3</awardID>
+  <playerID>3</playerID>
+</player_earn_awards>
+<player_earn_awards>
+  <awardID>4</awardID>
+  <playerID>4</playerID>
+</player_earn_awards>
+<player_earn_awards>
+  <awardID>5</awardID>
+  <playerID>5</playerID>
+</player_earn_awards>
+
+
+<stats_results_in_awards>
+  <awardID>1</awardID>
+  <statID>1</statID>
+  <awardee_name>LeBron James</awardee_name>
+</stats_results_in_awards>
+<stats_results_in_awards>
+  <awardID>2</awardID>
+  <statID>2</statID>
+  <awardee_name>Kevin Durant</awardee_name>
+</stats_results_in_awards>
+<stats_results_in_awards>
+  <awardID>3</awardID>
+  <statID>3</statID>
+  <awardee_name>Stephen Curry</awardee_name>
+</stats_results_in_awards>
+<stats_results_in_awards>
+  <awardID>4</awardID>
+  <statID>4</statID>
+  <awardee_name>Ja Morant</awardee_name>
+</stats_results_in_awards>
+<stats_results_in_awards>
+  <awardID>5</awardID>
+  <statID>5</statID>
+  <awardee_name>Joel Embiid</awardee_name>
+</stats_results_in_awards>
+
+
+
+<basketball>

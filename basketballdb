@@ -1,0 +1,145 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="players">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="player" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="playerID" type="xs:integer"/>
+              <xs:element name="name" type="xs:string"/>
+              <xs:element name="age" type="xs:integer"/>
+              <xs:element name="position" type="xs:string"/>
+              <xs:element name="Country" type="xs:string"/>
+              <xs:element name="team_name" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="playerID" type="xs:integer" use="required"/>
+            <xs:attribute name="team_name" type="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="stats">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="stat" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="statID" type="xs:integer"/>
+              <xs:element name="name" type="xs:string"/>
+              <xs:element name="pointsPG" type="xs:float"/>
+              <xs:element name="assistsPG" type="xs:float"/>
+              <xs:element name="reboundsPG" type="xs:float"/>
+              <xs:element name="blocksPG" type="xs:float"/>
+              <xs:element name="stealsPG" type="xs:float"/>
+            </xs:sequence>
+            <xs:attribute name="statID" type="xs:integer" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="awards">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="award" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="awardID" type="xs:integer"/>
+              <xs:element name="awardee_name" type="xs:string"/>
+              <xs:element name="MVPS" type="xs:integer"/>
+              <xs:element name="NumofAllStars" type="xs:integer"/>
+              <xs:element name="NumofChampionships" type="xs:integer"/>
+            </xs:sequence>
+            <xs:attribute name="awardID" type="xs:integer" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="physicalprofiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="physicalprofile" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="profileID" type="xs:integer"/>
+              <xs:element name="name" type="xs:string"/>
+              <xs:element name="height" type="xs:string"/>
+              <xs:element name="weight" type="xs:float"/>
+              <xs:element name="Wingspan" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+    
+  <xs:element name="team">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="teamID" type="xs:int"/>
+        <xs:element name="teamName" type="xs:string"/>
+        <xs:element name="conference" type="xs:string"/>
+        <xs:element name="wins" type="xs:int"/>
+        <xs:element name="losses" type="xs:int"/>
+        <xs:element name="ranking" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+     <xs:element name="player_possess_profile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="playerID" type="xs:integer"/>
+        <xs:element name="profileID" type="xs:integer"/>
+      </xs:sequence>
+      <xs:attribute name="playerID" type="xs:integer" use="required"/>
+      <xs:attribute name="profileID" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="fkprofileID">
+    <xs:complexType>
+      <xs:attribute name="profileID" type="xs:integer" use="required"/>
+    </xs:complexType>
+
+
+ <xs:element name="player_accumulate_stats">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="playerID" type="xs:integer"/>
+        <xs:element name="statID" type="xs:integer"/>
+      </xs:sequence>
+      <xs:attribute name="primaryKey" type="xs:integer" use="required"/>
+      <xs:attribute name="unique" type="xs:boolean" use="required" fixed="true"/>
+    </xs:complexType>
+  </xs:element>
+   
+
+
+<xs:element name="player_earn_awards">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="awardID" type="xs:integer"/>
+        <xs:element name="playerID" type="xs:integer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="stats_results_in_awards">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="awardID" type="xs:integer"/>
+        <xs:element name="statID" type="xs:integer"/>
+        <xs:element name="awardee_name" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+ 
+
+
+
+</xs:schema>

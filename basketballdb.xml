@@ -1,0 +1,517 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="players">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="player" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="playerID" type="xs:integer"/>
+              <xs:element name="name" type="xs:string"/>
+              <xs:element name="age" type="xs:integer"/>
+              <xs:element name="position" type="xs:string"/>
+              <xs:element name="Country" type="xs:string"/>
+              <xs:element name="team_name" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="playerID" type="xs:integer" use="required"/>
+            <xs:attribute name="team_name" type="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="stats">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="stat" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="statID" type="xs:integer"/>
+              <xs:element name="name" type="xs:string"/>
+              <xs:element name="pointsPG" type="xs:float"/>
+              <xs:element name="assistsPG" type="xs:float"/>
+              <xs:element name="reboundsPG" type="xs:float"/>
+              <xs:element name="blocksPG" type="xs:float"/>
+              <xs:element name="stealsPG" type="xs:float"/>
+            </xs:sequence>
+            <xs:attribute name="statID" type="xs:integer" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="awards">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="award" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="awardID" type="xs:integer"/>
+              <xs:element name="awardee_name" type="xs:string"/>
+              <xs:element name="MVPS" type="xs:integer"/>
+              <xs:element name="NumofAllStars" type="xs:integer"/>
+              <xs:element name="NumofChampionships" type="xs:integer"/>
+            </xs:sequence>
+            <xs:attribute name="awardID" type="xs:integer" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+<xs:element name="physicalprofile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="profileID" type="xs:integer"/>
+        <xs:element name="name" type="xs:string"/>
+        <xs:element name="height" type="xs:string"/>
+        <xs:element name="weight" type="xs:decimal"/>
+        <xs:element name="Wingspan" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+    
+  <xs:element name="team">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="teamID" type="xs:int"/>
+        <xs:element name="teamName" type="xs:string"/>
+        <xs:element name="conference" type="xs:string"/>
+        <xs:element name="wins" type="xs:int"/>
+        <xs:element name="losses" type="xs:int"/>
+        <xs:element name="ranking" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="player_possess_profile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="playerID" type="xs:integer"/>
+        <xs:element name="profileID" type="xs:integer"/>
+      </xs:sequence>
+      <xs:attribute name="playerID" type="xs:integer" use="required"/>
+      <xs:attribute name="profileID" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+ 
+
+
+ <xs:element name="player_accumulate_stats">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="playerID" type="xs:integer"/>
+        <xs:element name="statID" type="xs:integer"/>
+      </xs:sequence>
+      <xs:attribute name="primaryKey" type="xs:integer" use="required"/>
+      <xs:attribute name="unique" type="xs:boolean" use="required" fixed="true"/>
+    </xs:complexType>
+  </xs:element>
+   
+
+
+  <xs:element name="player_earn_awards">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="awardID" type="xs:integer"/>
+        <xs:element name="playerID" type="xs:integer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="stats_results_in_awards">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="awardID" type="xs:integer"/>
+        <xs:element name="statID" type="xs:integer"/>
+        <xs:element name="awardee_name" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+ 
+
+
+
+</xs:schema>
+
+
+
+<basketball>
+
+<player>
+  <playerID>1</playerID>
+  <name>LeBron James</name>
+  <age>37</age>
+  <position>Small Forward</position>
+  <Country>United States</Country>
+  <team_name>Los Angeles Lakers</team_name>
+</player>
+
+<player>
+  <playerID>2</playerID>
+  <name>Kevin Durant</name>
+  <age>33</age>
+  <position>Small Forward</position>
+  <Country>United States</Country>
+  <team_name>Brooklyn Nets</team_name>
+</player>
+
+<player>
+  <playerID>3</playerID>
+  <name>Luka Doncic</name>
+  <age>22</age>
+  <position>Point Guard</position>
+  <Country>Slovenia</Country>
+  <team_name>Dallas Mavericks</team_name>
+</player>
+
+<player>
+  <playerID>4</playerID>
+  <name>Giannis Antetokounmpo</name>
+  <age>27</age>
+  <position>Power Forward</position>
+  <Country>Greece</Country>
+  <team_name>Milwaukee Bucks</team_name>
+</player>
+
+<player>
+  <playerID>5</playerID>
+  <name>Stephen Curry</name>
+  <age>33</age>
+  <position>Point Guard</position>
+  <Country>United States</Country>
+  <team_name>Golden State Warriors</team_name>
+</player>
+
+
+<stats>
+  <statID>1</statID>
+  <name>LeBron James</name>
+  <pointsPG>25.5</pointsPG>
+  <assistsPG>7.7</assistsPG>
+  <reboundsPG>7.9</reboundsPG>
+  <blocksPG>0.6</blocksPG>
+  <stealsPG>1.3</stealsPG>
+</stats>
+
+<stats>
+  <statID>2</statID>
+  <name>Kevin Durant</name>
+  <pointsPG>28.2</pointsPG>
+  <assistsPG>5.2</assistsPG>
+  <reboundsPG>7.1</reboundsPG>
+  <blocksPG>1.3</blocksPG>
+  <stealsPG>0.8</stealsPG>
+</stats>
+
+<stats>
+  <statID>3</statID>
+  <name>Luka Doncic</name>
+  <pointsPG>26.5</pointsPG>
+  <assistsPG>9.1</assistsPG>
+  <reboundsPG>8.4</reboundsPG>
+  <blocksPG>0.5</blocksPG>
+  <stealsPG>1.0</stealsPG>
+</stats>
+
+<stats>
+  <statID>4</statID>
+  <name>Giannis Antetokounmpo</name>
+  <pointsPG>28.1</pointsPG>
+  <assistsPG>5.9</assistsPG>
+  <reboundsPG>11.0</reboundsPG>
+  <blocksPG>1.2</blocksPG>
+  <stealsPG>1.2</stealsPG>
+</stats>
+
+<stats>
+  <statID>5</statID>
+  <name>Stephen Curry</name>
+  <pointsPG>30.2</pointsPG>
+  <assistsPG> 7.7</assistsPG>
+  <reboundsPG>4.2</reboundsPG>
+  <blocksPG>0.6</blocksPG>
+  <stealsPG>1.7</stealsPG>
+</stats>
+
+
+
+<awards>
+  <award>
+    <awardID>1</awardID>
+    <awardee_name>LeBron James</awardee_name>
+    <MVPS>4</MVPS>
+    <NumofAllStars>17</NumofAllStars>
+    <NumofChampionships>4</NumofChampionships>
+  </award>
+  <award>
+    <awardID>2</awardID>
+    <awardee_name>Stephen Curry</awardee_name>
+    <MVPS>2</MVPS>
+    <NumofAllStars>7</NumofAllStars>
+    <NumofChampionships>3</NumofChampionships>
+  </award>
+  <award>
+    <awardID>3</awardID>
+    <awardee_name>Kevin Durant</awardee_name>
+    <MVPS>1</MVPS>
+    <NumofAllStars>11</NumofAllStars>
+    <NumofChampionships>2</NumofChampionships>
+  </award>
+  <award>
+    <awardID>4</awardID>
+    <awardee_name>Kobe Bryant</awardee_name>
+    <MVPS>1</MVPS>
+    <NumofAllStars>18</NumofAllStars>
+    <NumofChampionships>5</NumofChampionships>
+  </award>
+  <award>
+    <awardID>5</awardID>
+    <awardee_name>Michael Jordan</awardee_name>
+    <MVPS>5</MVPS>
+    <NumofAllStars>14</NumofAllStars>
+    <NumofChampionships>6</NumofChampionships>
+  </award>
+</awards>
+
+
+
+<physicalprofiles>
+  <physicalprofile>
+    <profileID>1</profileID>
+    <name>LeBron James</name>
+    <height>6'8"</height>
+    <weight>250</weight>
+    <Wingspan>7'0"</Wingspan>
+  </physicalprofile>
+  <physicalprofile>
+    <profileID>2</profileID>
+    <name>Stephen Curry</name>
+    <height>6'3"</height>
+    <weight>185</weight>
+    <Wingspan>6'4"</Wingspan>
+  </physicalprofile>
+  <physicalprofile>
+    <profileID>3</profileID>
+    <name>Kevin Durant</name>
+    <height>6'10"</height>
+    <weight>240</weight>
+    <Wingspan>7'4"</Wingspan>
+  </physicalprofile>
+  <physicalprofile>
+    <profileID>4</profileID>
+    <name>Kobe Bryant</name>
+    <height>6'6"</height>
+    <weight>212</weight>
+    <Wingspan>6'11"</Wingspan>
+  </physicalprofile>
+  <physicalprofile>
+    <profileID>5</profileID>
+    <name>Michael Jordan</name>
+    <height>6'6"</height>
+    <weight>216</weight>
+    <Wingspan>6'11"</Wingspan>
+  </physicalprofile>
+</physicalprofiles>
+
+<team>
+  <teamID>1</teamID>
+  <teamName>Los Angeles Lakers</teamName>
+  <conference>West</conference>
+  <wins>54</wins>
+  <losses>28</losses>
+  <ranking>5</ranking>
+</team>
+<team>
+  <teamID>2</teamID>
+  <teamName>Phoenix Suns</teamName>
+  <conference>West</conference>
+  <wins>56</wins>
+  <losses>26</losses>
+  <ranking>3</ranking>
+</team>
+<team>
+  <teamID>3</teamID>
+  <teamName>Golden State Warriors</teamName>
+  <conference>West</conference>
+  <wins>64</wins>
+  <losses>18</losses>
+  <ranking>2</ranking>
+</team>
+<team>
+  <teamID>4</teamID>
+  <teamName>Memphis Grizzlies</teamName>
+  <conference>West</conference>
+  <wins>50</wins>
+  <losses>32</losses>
+  <ranking>6</ranking>
+</team>
+<team>
+  <teamID>5</teamID>
+  <teamName>Philadelphia 76ers</teamName>
+  <conference>East</conference>
+  <wins>55</wins>
+  <losses>27</losses>
+  <ranking>4</ranking>
+</team>
+
+<player_possess_profile>
+  <playerID>1</playerID>
+  <profileID>1</profileID>
+</player_possess_profile>
+<player_possess_profile>
+  <playerID>2</playerID>
+  <profileID>2</profileID>
+</player_possess_profile>
+<player_possess_profile>
+  <playerID>3</playerID>
+  <profileID>3</profileID>
+</player_possess_profile>
+<player_possess_profile>
+  <playerID>4</playerID>
+  <profileID>4</profileID>
+</player_possess_profile>
+<player_possess_profile>
+  <playerID>5</playerID>
+  <profileID>5</profileID>
+</player_possess_profile>
+
+<player_accumulate_stats>
+  <playerID>1</playerID>
+  <statID>1</statID>
+</player_accumulate_stats>
+<player_accumulate_stats>
+  <playerID>2</playerID>
+  <statID>2</statID>
+</player_accumulate_stats>
+<player_accumulate_stats>
+  <playerID>3</playerID>
+  <statID>3</statID>
+</player_accumulate_stats>
+<player_accumulate_stats>
+  <playerID>4</playerID>
+  <statID>4</statID>
+</player_accumulate_stats>
+<player_accumulate_stats>
+  <playerID>5</playerID>
+  <statID>5</statID>
+</player_accumulate_stats>
+
+<player_earn_awards>
+  <awardID>1</awardID>
+  <playerID>1</playerID>
+</player_earn_awards>
+<player_earn_awards>
+  <awardID>2</awardID>
+  <playerID>2</playerID>
+</player_earn_awards>
+<player_earn_awards>
+  <awardID>2</awardID>
+  <playerID>2</playerID>
+</player_earn_awards>
+<player_earn_awards>
+  <awardID>3</awardID>
+  <playerID>3</playerID>
+</player_earn_awards>
+<player_earn_awards>
+  <awardID>4</awardID>
+  <playerID>4</playerID>
+</player_earn_awards>
+<player_earn_awards>
+  <awardID>5</awardID>
+  <playerID>5</playerID>
+</player_earn_awards>
+
+
+<stats_results_in_awards>
+  <awardID>1</awardID>
+  <statID>1</statID>
+  <awardee_name>LeBron James</awardee_name>
+</stats_results_in_awards>
+<stats_results_in_awards>
+  <awardID>2</awardID>
+  <statID>2</statID>
+  <awardee_name>Kevin Durant</awardee_name>
+</stats_results_in_awards>
+<stats_results_in_awards>
+  <awardID>3</awardID>
+  <statID>3</statID>
+  <awardee_name>Stephen Curry</awardee_name>
+</stats_results_in_awards>
+<stats_results_in_awards>
+  <awardID>4</awardID>
+  <statID>4</statID>
+  <awardee_name>Ja Morant</awardee_name>
+</stats_results_in_awards>
+<stats_results_in_awards>
+  <awardID>5</awardID>
+  <statID>5</statID>
+  <awardee_name>Joel Embiid</awardee_name>
+</stats_results_in_awards>
+
+
+
+<basketball>
+
+
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  
+  <xsl:template match="/">
+    <xsl:variable name="maxPoints" select="/stats/player[point = max(/stats/player/point)]/point"/>
+    <xsl:variable name="playerName" select="/stats/player[point = $maxPoints]/name"/>
+    <xsl:value-of select="$playerName"/> has the highest points per game with <xsl:value-of select="$maxPoints"/> points.
+  </xsl:template>
+
+<xsl:template match="/">
+  <xsl:for-each select="stats/player">
+    <xsl:sort select="reboundsPG" data-type="number" order="ascending"/>
+    <xsl:if test="position()=1">
+      <reboundsPG><xsl:value-of select="reboundsPG"/></reboundsPG>
+      <name><xsl:value-of select="name"/></name>
+    </xsl:if>
+  </xsl:for-each>
+</xsl:template>
+
+
+<xsl:template match="/">
+  <xsl:for-each select="teams/team">
+    <xsl:sort select="wins" order="descending" />
+    <xsl:if test="position() = 1">
+      <xsl:value-of select="concat('Team with most wins: ', teamname, ' (', wins, ' wins)')" />
+    </xsl:if>
+  </xsl:for-each>
+</xsl:template>
+
+
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:template match="/">
+    <xsl:apply-templates select="//awards[MVPS >= 1 and NumofAllStars > 3]/awardee_name"/>
+  </xsl:template>
+  
+  <xsl:template match="awardee_name">
+    <xsl:value-of select="."/>
+    <xsl:text>&#xa;</xsl:text>
+  </xsl:template>
+</xsl:stylesheet>
+
+  
+  <xsl:template match="/">
+    <players>
+      <xsl:for-each select="//player[team_name='Golden State Warriors']">
+        <player>
+          <xsl:value-of select="name"/>
+        </player>
+      </xsl:for-each>
+    </players>
+  </xsl:template>
+  
+</xsl:stylesheet>
+
+
+

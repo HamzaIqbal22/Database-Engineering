@@ -1,0 +1,53 @@
+
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  
+  <xsl:template match="/">
+    <xsl:variable name="maxPoints" select="/stats/player[point = max(/stats/player/point)]/point"/>
+    <xsl:variable name="playerName" select="/stats/player[point = $maxPoints]/name"/>
+    <xsl:value-of select="$playerName"/> has the highest points per game with <xsl:value-of select="$maxPoints"/> points.
+  </xsl:template>
+
+<xsl:template match="/">
+  <xsl:for-each select="stats/player">
+    <xsl:sort select="reboundsPG" data-type="number" order="ascending"/>
+    <xsl:if test="position()=1">
+      <reboundsPG><xsl:value-of select="reboundsPG"/></reboundsPG>
+      <name><xsl:value-of select="name"/></name>
+    </xsl:if>
+  </xsl:for-each>
+</xsl:template>
+
+
+<xsl:template match="/">
+  <xsl:for-each select="teams/team">
+    <xsl:sort select="wins" order="descending" />
+    <xsl:if test="position() = 1">
+      <xsl:value-of select="concat('Team with most wins: ', teamname, ' (', wins, ' wins)')" />
+    </xsl:if>
+  </xsl:for-each>
+</xsl:template>
+
+
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:template match="/">
+    <xsl:apply-templates select="//awards[MVPS >= 1 and NumofAllStars > 3]/awardee_name"/>
+  </xsl:template>
+  
+  <xsl:template match="awardee_name">
+    <xsl:value-of select="."/>
+    <xsl:text>&#xa;</xsl:text>
+  </xsl:template>
+</xsl:stylesheet>
+
+  
+  <xsl:template match="/">
+    <players>
+      <xsl:for-each select="//player[team_name='Golden State Warriors']">
+        <player>
+          <xsl:value-of select="name"/>
+        </player>
+      </xsl:for-each>
+    </players>
+  </xsl:template>
+  
+</xsl:stylesheet>
