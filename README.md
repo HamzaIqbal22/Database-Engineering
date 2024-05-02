@@ -26,9 +26,8 @@ The primary objectives of the project include:
 ### 'Player' Table
 ![image](https://github.com/HamzaIqbal22/Database-Engineering/assets/81776951/0387f9a7-51bc-436b-bf66-c634db0e4c6c)
 
-### Sample Query 
-![image](https://github.com/HamzaIqbal22/Database-Engineering/assets/81776951/8d152c94-186f-4305-991a-0c1423348255)
-
 ### Sample Query List
 ![download](https://github.com/HamzaIqbal22/Database-Engineering/assets/81776951/c8c63a5d-431e-4939-8664-1bfbb6bca603)
 
+### Sample Query 
+![image](https://github.com/HamzaIqbal22/Database-Engineering/assets/81776951/8d152c94-186f-4305-991a-0c1423348255)
